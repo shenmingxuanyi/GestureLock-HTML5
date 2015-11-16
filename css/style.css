@@ -1,0 +1,19 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.gestureLock-bg {
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #0e419b 0%, #19859c 100%) repeat scroll 0 0;
+}
+
+.navbar-inverse {
+    background-color: rgba(0, 0, 0, .1);
+    border-color: rgba(0, 0, 0, .2);
+    -o-border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
