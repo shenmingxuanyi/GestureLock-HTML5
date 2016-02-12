@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+
+    <title>GestureLock</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <!-- bootstrap样式 -->
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/3.3.5/css/bootstrap.css">
+
+    <!--  theme 样式 -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- angularJS -->
+    <script type="text/javascript" src="js/gestureLock.js"></script>
+</head>
+<body class="gestureLock-bg">
+<nav class="navbar navbar-inverse navbar-default">
+    <div class="container-fluid">
+
+        <div class="navbar-header ">
+
+            <a type="button" class="navbar-toggle collapsed btn-success" id="updatePassword-xs">
+                重置密码
+            </a>
+            <a class="navbar-brand " href="mailto:sm.xy@live.com">GestureLock</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li id="updatePassword"><a href="javascript:;">重置密码</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="mailto:sm.xy@live.com">sm.xy@live.com</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<div align="center" style="margin-top:40px">
+    <h3 style="color: #fefefe;" id="title"></h3>
+</div>
+
+<div align="center" class="gestureLock-body">
+    <canvas id="gestureLock"></canvas>
+</div>
+
+</body>
+<script>
+    var lock = new GestureLock({
+        id: "gestureLock",
+        matrix: 3,
+        height: window.innerWidth < (window.innerHeight - 200) ? window.innerWidth : (window.innerHeight - 200),
+        width: window.innerWidth < (window.innerHeight - 200) ? window.innerWidth : (window.innerHeight - 200)
+    });
+    lock.init();
+</script>
+</html>
